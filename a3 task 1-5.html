@@ -1,0 +1,481 @@
+<!--For A3 I have used both internal and inline CSS style to add variety and show my understanding of both.
+Additionally Javascript and html has been used according to my understanding and learning.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Metadata for the webpage, including character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignment 3</title>
+    <style>
+
+         /* General body styling for font, background color, and padding */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+         /* Centering headers and adding bottom borders for emphasis */
+        h1, h2, h3 {
+            text-align: center;
+            border-bottom: 2px solid gray;
+            padding-bottom: 10px;
+        }
+        
+        /* Styling for different task containers with unique background colors and borders */
+        .task-container1, .task-container2, .task-container3, .task-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px gray;
+        }
+        
+         /* Specific styling for Task 1 container */
+        .task-container1 {
+            background-color: plum;
+            border-style: dashed;
+            text-align: center;
+        }
+
+         /* Specific styling for Task 2 container */
+        .task-container2 {
+            background-color: white;
+        }
+
+        /* Specific styling for Task 3 container */
+        .task-container3 {
+            background-color: rgb(144, 219, 143);
+        }
+
+         /* Added CSS for Task 3 table */
+         .task-container3 table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            table-layout: fixed;
+            word-wrap: break-word;
+        }
+
+        .task-container3 th {
+            padding: 12px 15px;
+            border: 2px solid black;
+            text-align: left;
+            background-color: blue; /* Header color changed to blue */
+            color: white;
+        }
+
+        .task-container3 td {
+            padding: 12px 15px;
+            border: 2px solid black;
+            text-align: left;
+        }
+
+        .task-container3 tr:nth-child(even) {
+            background-color: lightyellow/* Even rows color changed to pink */
+        }
+
+        .task-container3 tr:nth-child(odd) {
+            background-color: lavender; /* Odd rows color changed to light purple (lavender) */
+        }
+
+        .task-container3 tr:hover {
+            background-color: lightblue; /* Optional: hover effect color */
+        }
+
+         /* General table styling with fixed layout and word wrapping to handle long text */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            table-layout: fixed; /* Added to ensure table fits within the container */
+            word-wrap: break-word; /* Added to wrap long text within cells */
+        }
+
+        /* Styling for table header cells */
+        th, td {
+            padding: 12px 15px;
+            border: 2px solid black;
+            text-align: left;
+        }
+
+        /* Header background color for tables */
+        th {
+            background-color: rgb(132, 71, 132);
+            color: white;
+        }
+
+         /* Alternate row colors for better readability */
+        tr:nth-child(even) {
+            background-color: lightpink; /*even rows coloured pink*/
+        }
+
+        tr:nth-child(odd) {
+            background-color: white; /*odd rows coloured white*/
+        }
+
+         /* Row hover effect for user interaction */
+        tr:hover {
+            background-color: lightblue; /*hover effect coloured blue to make it more interesting*/
+        }
+
+        /* Link styling with no underline by default, underline on hover */
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+         /* Ensuring images fit within their cells without overflowing */
+        img {
+            max-width: 100%; /* Added to ensure images fit within their cells */
+            height: auto;
+        }
+
+        /* General button styling for interactive elements */
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Class for highlighting elements, used in JavaScript functionality */
+        .highlighted {
+            background-color: yellow;
+        }
+
+        /* Margins added for elements that will be updated or shown dynamically via JavaScript */
+        #message, #image-container {
+            margin-top: 20px;
+        }
+
+        #text-field {
+            margin: 20px 0;
+        }
+
+        /* Specific image size for the animal images in Task 4 */
+        img {
+            width: 300px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+     <!-- Main header for the webpage -->
+    <h1>Kashifa Latif 8899022</h1>
+    
+     <!-- Task 1: Demonstrating basic CSS properties and inline styling -->
+    <h1>Task 1: Using CSS Properties</h1>
+    <div class="task-container1"> <!-- Container for task 1 with specific styling -->
+        <h1 style="color: purple;">8899022 Kashifa Latif</h1>
+        <h2 style="color: darkgreen;">COMP804 Web Security</h2>
+        <h3 style="color: blue;">Assignment 3, due at the start of week 6, 19 August 2024</h3>
+    </div>
+    
+
+        <!-- Task 2: Styling a table with CSS and demonstrating different CSS properties for tables -->
+    <div class="task-container2">
+        <h1>Task 2: Use CSS to style a table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- Each row represents an event with corresponding dates -->
+                <tr>               
+                    <td>First day to enrol for re-enrolling (continuing students)</td>
+                    <td>20 Nov 2023</td>
+                </tr>
+                <tr>
+                    <td>Orientation</td>
+                    <td>18 Jul 2023</td>
+                </tr>
+                <tr>
+                    <td>Lectures Commence (weeks 1-7)</td>
+                    <td>26 Feb - 12 Apr 2024</td>
+                </tr>
+                <tr>
+                    <td>Last day to enrol / add subjects yourself</td>
+                    <td>08 Mar 2024</td>
+                </tr>
+                <tr>
+                    <td>Last day to enrol / add subjects with Head of Students approval</td>
+                    <td>15 Mar 2024</td>
+                </tr>
+                <!-- The table includes nested lists and links to provide additional information -->
+                <tr>
+                    <td>
+                        <strong>CENSUS DATE</strong>
+                        <ul>
+                            <li>Fees Due</li>
+                            <li>Last date to withdraw from subjects without paying for them</li>
+                            <li>HECS / FEE HELP debt reporting date</li>
+                            <li>Last day to change HECS / FEE HELP billing option</li>
+                        </ul>
+                        <a href="https://uowedu.service-now.com/kb?id=kb_article_view&sysparm_article=KB0012659">Learn more about Census date ></a>
+                    </td>
+                    <td>22 Apr 2024</td>
+                </tr>
+                <tr>
+                    <td>Student Services and Amenities Fees Due</td>
+                    <td>23 Apr 2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+        
+    <!-- Task 3: Creating a table with images, links, and detailed descriptions of web security attacks -->
+    <div class="task-container3">
+        <h1>Task 3: Creating a Table using HTML and CSS</h1>
+        <table>
+            <thead>
+                <!-- Table headers for web attacks -->
+                <tr>
+                    <th>Name</th>
+                    <th>Web Attacks</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <!-- Each row contains an attack type, an image, a description, and a link for more information -->
+                <tr>
+                    <td>SQL Injection<br><img src="https://spanning.com/wp-content/uploads/2019/07/SQL-injection-needle.png" alt="SQL Injection Image"><br>Source:https://spanning.com/blog/sql-injection-attacks-web-based-application-security-part-4/</td>
+                    <td>A SQL Injection attack occurs when an attacker manipulates a SQL query by injecting malicious code into input fields, exploiting vulnerabilities in an applications software. 
+                        This type of attack can lead to unauthorised access to database information, allowing attackers to view, modify, or delete data without proper permissions. 
+                        It is one of the most common and dangerous web security vulnerabilities. The steps are as follows:
+                        1-Identification and Injection: A hacker identifies a vulnerable website that relies on SQL-driven input fields. The hacker injects malicious SQL queries into these input fields.
+                        2-Execution: The website validates the malicious SQL query and executes the command on the database.
+                        3-Access and Manipulation: The hacker gains access to the database, allowing them to view, alter, or delete records, potentially gaining administrative privileges over the database.
+                     <br><a href="https://owasp.org/www-community/attacks/SQL_Injection">https://owasp.org/www-community/attacks/SQL_Injection</a></td>
+                </tr>
+                <tr>
+                    <td>Cross-Site Scripting<br><img src="https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/sorted-XSS.png.webp" alt="Cross-Site Scripting Image"><br>Source:https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/</td>
+                    <td>Cross-site scripting (XSS) is a type of attack where malicious code is injected into a vulnerable web application. Unlike attacks that target the web application itself, XSS focuses 
+                        on compromising users who interact with the app. The consequences of XSS can be severe, affecting a business's reputation and user trust. Attacks can lead to compromised user accounts, 
+                        activation of malicious software, altered page content, and exposure of session cookies, allowing attackers to impersonate users.
+                        There are two main types of XSS attacks:
+                        Stored XSS (Persistent XSS): Malicious code is injected directly into the web application and can affect all users who access it  
+                        Reflected XSS: The malicious script is embedded in a link and only activated when the user clicks the link, reflecting the attack off the web application onto the user's browser.
+                        <br><a href="https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/">https://www.imperva.com/learn/application-security/cross-site-scripting-xss-attacks/</a></td>
+                </tr>
+                <tr>
+                    <td>Denial of Service<br><img src="https://www.cobalt.io/hs-fs/hubfs/Imported_Blog_Media/Content_Image_-_CTA_-blog_assets--Mar-20-2022-07-20-39-27-PM.png?width=1020&name=Content_Image_-_CTA_-blog_assets--Mar-20-2022-07-20-39-27-PM.png" alt="Denial of Service Image"><br>Source:https://www.cobalt.io/blog/what-is-denial-of-service-attack</td>
+                    <td>A denial-of-service (DoS) attack is a cyber attack where the attacker aims to make a computer or network service unavailable to its users by overwhelming it with excessive requests. 
+                        This flood of requests disrupts the normal operation of the target, leading to a denial-of-service for legitimate users.
+                        Distributed denial-of-service (DDoS) attacks are a subtype of DoS attacks that come from multiple sources, often using a network of compromised devices (botnets) to amplify the attack.
+                        DoS attacks generally fall into two categories:
+                        1.Buffer Overflow Attacks: These exploit memory buffers to consume excessive resources like disk space, memory, or CPU time, causing the system to slow down or crash.
+                        2.Flood Attacks: These involve overwhelming a server with an excessive amount of data packets, saturating its capacity and making it unable to handle legitimate traffic. Success typically depends on the attacker having more bandwidth than the target.
+                    <br><a href="https://www.cloudflare.com/learning/ddos/glossary/denial-of-service/">https://www.cloudflare.com/learning/ddos/glossary/denial-of-service/</a></td>
+                </tr>
+                <tr>
+                    <td>Phishing<br><img src="https://www.cloudflare.com/img/learning/security/threats/phishing-attack/diagram-phishing-attack.png" alt="Phishing Image"><br>Source:https://www.cloudflare.com/learning/access-management/phishing-attack/</td>
+                    <td>Phishing is a type of attack where a malicious actor tries to steal sensitive information, like usernames, passwords, or credit card details, by pretending to be a trustworthy source. The goal is to trick the victim into providing their information, 
+                        similar to how a fisherman uses bait to catch fish.
+                        Phishing is often carried out through deceptive emails or instant messages that mimic legitimate organisations. It is commonly used to facilitate other attacks, such as on-path or cross-site scripting attacks.
+                        Common examples include:
+                        1-Spear Phishing: Targeted phishing attacks aimed at specific individuals or companies using personalised information to create convincing scams. It accounts for over 90% of phishing attacks.
+                        2-Clone Phishing: A tactic where a previously legitimate email is replicated and modified with malicious links or attachments to deceive the victim into accessing harmful content.
+                        3-Whaling: Phishing attacks directed at high-level executives or senior officials, often involving urgent or important-sounding requests to exploit their authority and bypass security checks.
+                        <br><a href="https://www.cloudflare.com/learning/access-management/phishing-attack/">https://www.cloudflare.com/learning/access-management/phishing-attack/</a></td>
+                </tr>
+                <tr>
+                    <td>Man-in-the-Middle<br><img src="https://www.imperva.com/learn/wp-content/uploads/sites/13/2017/09/man-in-the-middle-mitm-attack.png.webp" alt="Man-in-the-Middle Image"><br>Source: https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/</td>
+                    <td> A man-in-the-middle (MITM) attack occurs when an attacker intercepts and potentially alters communication between a user and an application, making it seem like a normal exchange. 
+                        The main goal is to steal sensitive information, such as login credentials and credit card numbers, from users of financial services, SaaS platforms, e-commerce sites, and other login-required websites. 
+                        This stolen information can be used for identity theft, unauthorised transactions, or other malicious activities. Additionally, MITM attacks can help attackers infiltrate secure networks as part of a larger, advanced persistent threat (APT) assault. 
+                        Essentially, a MITM attack is like a mailman secretly opening your bank statement, copying your account details, 
+                        and then resealing and delivering the envelope as if nothing happened.
+                        <br><a href="https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/">https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/</a></td>
+                </tr>
+                <tr>
+                    <td>Brute Force<br><img src="https://images.spiceworks.com/wp-content/uploads/2022/05/10131245/Critical-Steps-of-a-Brute-Force-Attack.png" alt="Brute Force Image"><br>Source: https://www.spiceworks.com/it-security/cyber-risk-management/articles/what-is-brute-force-attack/m</td>
+                    <td>A brute force attack is a method used to gain unauthorised access to systems by systematically guessing usernames and passwords. These attacks, which account for about five percent of confirmed security breaches, often utilise applications
+                         and scripts to try numerous password combinations or search for the correct session ID. Attackers aim to steal information, infect sites with malware, or disrupt services. While some brute force attacks are still done manually, 
+                         most are now executed by bots using lists of commonly used or real user credentials obtained from breaches or the dark web.
+                         Types of Brute Force Attacks: Simple brute force attack, Hybrid brute force attack, Dictionary attack, Rainbow table attack, Reverse brute force attack, Credential stuffing.
+                        <br><a href="https://www.imperva.com/learn/application-security/brute-force-attack/">https://www.imperva.com/learn/application-security/brute-force-attack/</a></td>
+                </tr>
+                <tr>
+                    <td>Session Hijacking<br><img src="https://engineering.salesforce.com/wp-content/uploads/2022/04/1_Yx23EAf55x486r5M-38V-Q.png" alt="Session Hijacking Image"><br>Source: https://engineering.salesforce.com/how-salesforce-helps-protect-you-from-session-hijacking-threats-c39f4cf84cee/</td>
+                    <td>Session hijacking is an attack where a malicious actor takes control of a user's web session by stealing or manipulating the session token, which ensures secure and continuous communication between the user and a website. 
+                        Once the attacker intercepts this token, they can impersonate the user and access their information or services, often leading to fraud, identity theft, and breaches of confidential communications. How it works: 
+                        Attackers capture, brute force, or reverse-engineer session IDs to take over an active user session, gaining complete access to the user's data and permissions.
+                        Techniques for Session Hijacking:
+                        1-Brute Force: Trying multiple session IDs until one works.
+                        2-Calculate: Exploiting non-randomly generated IDs.
+                        3-Steal: Using various methods to acquire the session ID.
+                        <br><a href="https://www.imperva.com/learn/application-security/session-hijacking/#:~:text=It's%20a%20form%20of%20attack,the%20user%20and%20the%20website.">https://www.imperva.com/learn/application-security/session-hijacking/#:~:text=It's%20a%20form%20of%20attack,the%20user%20and%20the%20website./a></td>
+                </tr>
+                <tr>
+                    <td>DNS Tunneling<br><img src="https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/644cd0fd955aee02ec7135fb_How%20Does%20DNS%20Tunneling%20Works.jpg" alt="DNS Tunneling Image"><br>Source: https://www.wallarm.com/what/dns-tunneling-attack</td>
+                    <td>DNS tunneling is a stealthy attack where DNS requests are rerouted to an attacker's server, creating a covert channel for command and control (C&C) and data exfiltration. DNS functions like the internet's phonebook,
+                        translating domain names into IP addresses. Attackers exploit this by encoding small C&C messages or data into DNS queries and responses. 
+                        How DNS Tunneling Works:
+                        1-An attacker sets up a server with malware and a domain pointing to it.
+                        2-They infect a host with malware, which then queries the attacker's domain.
+                        3-The DNS resolver routes the query, establishing a tunnel between the attacker and the target. This allows the attacker to exfiltrate data or remotely control the host.
+                        DNS tunneling is hard to detect because DNS traffic is naturally noisy, making it difficult to differentiate between normal and malicious activity.
+                        <br><a href="https://hop.extrahop.com/resources/attacks/dns-tunneling/#:~:textWhat%20Is%20DNS%20Tunneling%3F,IP%20addresses%20and%20domain%20names.">https://hop.extrahop.com/resources/attacks/dns-tunneling/#:~:text=What%20Is%20DNS%20Tunneling%3F,IP%20addresses%20and%20domain%20names.</a></td>
+                </tr>
+                <tr>
+                    <td>Drive-by attack<br><img src="https://cdn.prod.website-files.com/5ff66329429d880392f6cba2/612e26b5ef8fa41340cc2a20_Totally%20Unauthorized%20Malware%20Download.png" alt="Drive-by attack Image"><br>Source: https://www.wallarm.com/what/drive-by-attack</td>
+                    <td>A drive-by attack, or drive-by download, is a cyberattack where malicious software installs itself on a user's device without their explicit permission, 
+                        often occurring when the user visits a compromised webpage. These attacks utilise exploit kits to identify vulnerabilities in the user's system 
+                        and initiate the download automatically. They can occur without any user interaction or through deceptive means, such as disguised buttons or links. 
+                        The primary goal of drive-by attacks is to infect devices, steal information, or damage data, exploiting weaknesses in web browsers or devices.
+                        <br><a href="https://www.ericom.com/glossary/what-is-a-drive-by-attack/">https://www.ericom.com/glossary/what-is-a-drive-by-attack/</a></td>
+                </tr>
+                <tr>
+                    <td>Zero-Day Attack<br><img src="https://cloudkul.com/blog/wp-content/uploads/2022/05/zero-day-1-1024x713.jpg" alt="Zero-Day Attack Image"><br>Source: https://cloudkul.com/blog/impact-of-zero-day-attacks-on-a-companys-productivity/</td>
+                    <td>A zero-day exploit targets an unknown or unpatched security flaw in software, hardware, or firmware. The term "zero-day" means that the vendor has zero days to fix the flaw because it is already being exploited by attackers.
+                        1-Zero-Day Vulnerability: An unaddressed security flaw.
+                        2-Zero-Day Attack: An attack using a zero-day exploit to cause damage.
+                        3-Zero-Day Malware: Malware with an unknown signature, making it undetectable by many antivirus programs.
+                        4-Zero-Day Lifecycle:
+                        -A flaw exists but is undiscovered.
+                        -It may be found by researchers or hackers.
+                        -Once discovered, it becomes public, prompting a rush to fix it.
+                        -Hackers may exploit it before a patch is available.
+                        Some examples of Zero-Day Attacks:
+                        1-Stuxnet: A worm that used multiple zero-day vulnerabilities to damage Iranian nuclear centrifuges in 2010.
+                        2-Log4Shell: A flaw in the Log4J library that allowed remote control of devices; exploited in 2021.
+                        3-2022 Chrome Attacks: North Korean hackers exploited a Chrome vulnerability to install spyware through phishing emails.
+                        <br><a href="https://www.ibm.com/topics/zero-day#:~:text=A%20zero%2Dday%20exploit%20is,it%20to%20access%20vulnerable%20systems.">https://www.ibm.com/topics/zero-day#:~:text=A%20zero%2Dday%20exploit%20is,it%20to%20access%20vulnerable%20systems.</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!--Task 4 showing cat, dog and frog buttons which are highlighted when clicked and related animal picture 
+    is displayed (user interaction)-->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <h1>Task 4: HTML Design and JavaScript Programming</h1>
+      <style>
+          .button {
+              padding: 10px;
+              margin: 5px;
+              border: 1px solid #000;
+              cursor: pointer;
+          }
+          .highlighted {
+              background-color: yellow;
+              border: 1px solid blue;
+          }
+          #text-field {
+              margin: 10px 0;
+              padding: 10px;
+              border: 1px solid black;
+              width: fit-content;
+          }
+          #message {
+              margin: 10px 0;
+              padding: 0;
+              width: fit-content;
+          }
+          #image-container {
+              margin: 10px 0;
+          }
+      </style>
+  </head>
+  <body>
+      <!-- Buttons -->
+      <button class="button" id="cat-btn" onclick="showContent('cat')">Cat</button>
+      <button class="button" id="dog-btn" onclick="showContent('dog')">Dog</button>
+      <button class="button" id="frog-btn" onclick="showContent('frog')">Frog</button>
+  
+      <!-- Text Field -->
+      <div id="text-field"></div>
+  
+      <!-- Message Field -->
+      <div id="message"></div>
+  
+      <!-- Image Container -->
+      <div id="image-container"></div>
+  
+      <script>
+            // Function to show content based on the button clicked
+          function showContent(animal) {
+                         
+            // Get all buttons with the class 'button'
+              const buttons = document.querySelectorAll('.button');
+
+            // Remove the 'highlighted' class from all buttons
+              buttons.forEach(button => button.classList.remove('highlighted'));
+         
+            // Get the elements where the text, message, and image will be displayed
+              const textField = document.getElementById('text-field');
+              const message = document.getElementById('message');
+              const imageContainer = document.getElementById('image-container');
+  
+             // Update the text field to display the message based on the button clicked and update message field with corresponding message
+              textField.innerHTML = `User clicks ${animal.charAt(0).toUpperCase() + animal.slice(1)}`;
+              message.innerHTML = `${animal.charAt(0).toUpperCase() + animal.slice(1)} is clicked`;
+  
+              // Set image and source link, update the image container to display the corresponding image
+              const { imgSrc, imgAlt, imgSource } = getAnimalData(animal);
+              imageContainer.innerHTML = `<img src="${imgSrc}" alt="${imgAlt}"><br><p>Source: <a href="${imgSource}" target="_blank">${imgSource}</a></p>`;
+  
+              // Add the 'highlighted' class to the button that was clicked
+              document.getElementById(`${animal}-btn`).classList.add('highlighted');
+          }
+  
+          function getAnimalData(animal) {
+              // Check if the selected animal is 'cat'
+              if (animal === 'cat') {
+                 // Return an object containing the image source, alt text, and source link for the cat
+                  return {
+                      imgSrc: 'https://img.freepik.com/free-photo/adorable-cat-lifestyle_23-2151593405.jpg',
+                      imgAlt: 'Cat Image',
+                      imgSource: 'https://www.freepik.com/photos/cute-cat'
+                  };
+
+                // Check if the selected animal is 'dog'
+              } else if (animal === 'dog') {
+                // Return an object containing the image source, alt text, and source link for the dog
+                  return {
+                      imgSrc: 'https://media.istockphoto.com/id/1652227141/photo/running-fluffy-pembroke-welsh-corgi-puppy.jpg?s=1024x1024&w=is&k=20&c=s5GaJnSlc2YAIG-2Qtoj9R-xM5uvDhB3uJ2wiXkp73Q=',
+                      imgAlt: 'Dog Image',
+                      imgSource: 'https://www.istockphoto.com/photo/running-fluffy-pembroke-welsh-corgi-puppy-gm1652227141-534204006?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fcute-dog&utm_medium=affiliate&utm_source=unsplash&utm_term=cute+dog%3A%3A%3A'
+                  };
+
+                // Check if the selected animal is 'frog'
+              } else if (animal === 'frog') {
+                  return {
+                // Return an object containing the image source, alt text, and source link for the frog
+                      imgSrc: 'https://gratisography.com/wp-content/uploads/2023/01/gratisography-frog-racer-free-stock-photo-1165x780.jpg',
+                      imgAlt: 'Frog Image',
+                      imgSource: 'https://gratisography.com/photo/cute-green-frog/'
+                  };
+              }
+          }
+      </script>
+  </body>
+  </html>
+  
+
+     <!-- Task 5 content here-->
+    <div class="task-container">
+        <h1>Task 5: GitHub Repository and Hyperlink</h1>
+        
+    </div>
+</body>
+</html>
+
